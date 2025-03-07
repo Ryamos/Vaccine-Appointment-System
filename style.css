@@ -1,0 +1,463 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f8f9fa;
+  padding-top: 40px; /* Push content down to compensate for fixed header */
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make header always visible */
+/* General header styling */
+header {
+  background: #004466;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+hr {
+  height: 3px;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  width: 95%;
+  border-radius: 5px;
+}
+
+/* Make header flex and align items horizontally */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+}
+
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 3px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+/* Ensure nav is aligned properly */
+/* Navigation styling */
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally (optional) */
+}
+
+nav ul li {
+  margin-left: 30px;
+  text-align: center;
+
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #004466;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+.hero {
+  margin-top: 50px;
+  margin-bottom: 215px;
+  background: white;
+}
+.hero h2 {
+  font-size: 50px;
+  color: #000000;
+  margin-bottom: 10px !important;
+}
+.hero p {
+  color: #000000;
+  margin-top: 0 !important;
+}
+/* Hero Section */
+.hero {
+  background: url("your-image.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+/* Styling the 'Book Now' button */
+.hero .btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #007bff; /* Primary blue color */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  display: inline-block;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.hero .btn:hover {
+  background: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.doctors {
+  margin-top: 200px;
+  margin-bottom: 80px;
+  padding: 50px 0;
+}
+/* Center the H2 */
+.doctors h2 {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 40px; /* Adds some space below */
+  margin-top: 20px;
+}
+
+/* Arrange doctor cards horizontally */
+.doctor-list {
+  display: flex;
+  justify-content: center; /* Centers the cards */
+  gap: 20px; /* Adds space between cards */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Doctor Card Styling */
+.doctor-card {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.doctor-card img {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px); /* Adds a hover effect */
+}
+
+.appointment {
+  background-color: #f9f9f9;
+}
+
+.appointment h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #004466;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  max-width: 500px;
+  margin: auto;
+  align-items: center;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: 500px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input,
+form select,
+form textarea {
+  align-content: center;
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #004466;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 68, 102, 0.3);
+}
+
+/* Button Styling */
+form button {
+  width: 90%;
+  background: #004466;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+form button:hover {
+  background: #003355;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  form {
+    padding: 20px;
+  }
+}
+/* Contact Section */
+.contact {
+
+  background: #f9f9f9;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #004466;
+}
+
+/* Wrapper for aligning both sections */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensures both sections have equal height */
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Contact Info (Left Side) */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #004466;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Align icons with text */
+  gap: 10px;
+}
+
+.contact-info i {
+  color: #004466;
+  font-size: 18px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form (Right Side) */
+.contact-form {
+  flex: 1;
+  color: #004466;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.contact-form h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #004466;
+}
+
+/* Form Styling */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Restrict form width for cleaner layout */
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #004466;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 68, 102, 0.3);
+}
+
+/* Submit Button */
+.contact-form button {
+  width: 100%;
+  background: #004466;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.contact-form button:hover {
+  background: #003355;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 90%;
+  }
+
+  .contact-info p {
+    justify-content: center; /* Center text with icons on small screens */
+  }
+}
+
+
+/* Footer */
+footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -----------*/
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* Adjust based on your header height */
+}

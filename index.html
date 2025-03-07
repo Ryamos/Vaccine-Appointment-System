@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/syringe.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <h1><a href="#home">Vaccine Appointment System</a></h1>
+        <nav>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#appointment">Book Appointment</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Welcome to Our Clinic</h2>
+        <p>
+          "Book your vaccination appointment with trusted healthcare
+          professionals."
+        </p>
+        <a href="#appointment" class="btn">Book Now</a>
+      </div>
+    </section>
+    <hr />
+
+    <section id="doctors" class="doctors">
+      <div class="container">
+        <h2>Meet Our Doctors</h2>
+        <div class="doctor-list">
+          <div class="doctor-card">
+            <img src="img/doc1.JPG" alt="Dr. Ryan Ceasar" />
+            <h3>Dr. Ryan Ceasar</h3>
+            <p>Dermatologist | 5+ Years Experience</p>
+          </div>
+          <div class="doctor-card">
+            <img src="img/doc2.png" alt="Dr. Caliwara" />
+            <h3>Dr. Caliwara</h3>
+            <p>Pediatrician | 11+ Years Experience</p>
+          </div>
+          <div class="doctor-card">
+            <img src="img/doc3.jpg" alt="Dr. Ramos" />
+            <h3>Dr. Ramos</h3>
+            <p>Cardiologist | 16+ Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section id="appointment" class="appointment">
+      <div class="container">
+        <h2 class="section-title">Schedule Your Vaccination</h2>
+        <p class="section-subtitle">
+          Ensure your health and safety by booking an appointment with our
+          certified professionals.
+        </p>
+
+        <form id="appointmentForm" class="appointment-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="doctor">Select a Specialist</label>
+            <select id="doctor" required>
+              <option value="" disabled selected>Select a doctor</option>
+              <option value="Dr. John Doe">Dr. Ryan Ceasar - Dermatologist</option>
+              <option value="Dr. Jane Smith">
+                Dr. Caliwara - Pediatrician
+              </option>
+              <option value="Dr. Emily Johnson">
+                Dr. Ramos - Cardiologist
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Appointment Date</label>
+            <input type="date" id="date" required />
+          </div>
+
+          <center><button type="submit" class="btn-submit">Confirm Appointment</button></center>
+        </form>
+        <p id="confirmationMessage"></p>
+      </div>
+    </section>
+
+    <hr />
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+
+        <div class="contact-wrapper">
+          <!-- Left Side: Contact Information -->
+          <div class="contact-info">
+            <h3><i class="fas fa-address-book"></i> Get in Touch</h3>
+            <p>
+              <i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +1 234
+              567 890
+            </p>
+            <p>
+              <i class="fas fa-mobile-alt"></i> <strong>Mobile:</strong> +1 987
+              654 321
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <strong>Email:</strong> clinic@example.com
+            </p>
+            <p>
+              <i class="fab fa-facebook"></i> <strong>Facebook:</strong>
+              <a href="https://facebook.com" target="_blank"
+                >facebook.com/clinicpage</a
+              >
+            </p>
+            <p>
+              <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong>
+              <a href="https://linkedin.com" target="_blank"
+                >linkedin.com/in/clinic</a
+              >
+            </p>
+            <p>
+              <i class="fab fa-instagram"></i> <strong>Instagram:</strong>
+              <a href="https://instagram.com" target="_blank">@clinic</a>
+            </p>
+          </div>
+
+          <!-- Right Side: Contact Form -->
+          <div class="contact-form" style="align-items: start; padding-right: 60px;">
+            <h3><i class="fas fa-envelope-open-text"></i> Request Message</h3>
+
+            <label for="contactName">Name:</label>
+            <input type="text" id="contactName" required />
+
+            <label for="contactEmail">Email:</label>
+            <input type="email" id="contactEmail" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit" style="margin-left: 15px;">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/YOUR-KIT-ID.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> Vaccine Appointment System. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
